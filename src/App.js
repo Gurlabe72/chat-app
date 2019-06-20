@@ -23,16 +23,20 @@ class App extends React.Component {
         currentUser.subscribeToRoom({
           roomId: 19425969,
           //the amount of messgaes can be limited
-          messageLimit: 50,
+          messageLimit: 50, 
           hooks: {
             onNewMessage: message => {
               console.log('message.text: ', message.text);
+              this.setState({
+                messages:[...this.state.messages, message]             
+              })
             }
           }
         })
     })
   }
   render() {
+    console.log('this.state.messages:', this.state.messages);
     return (
       <div className="app">
         <RoomList />
