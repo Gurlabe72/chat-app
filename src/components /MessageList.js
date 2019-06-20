@@ -11,7 +11,7 @@ const DUMMY_DATA =[
 },
 {
     senderId: 'Raman',
-    text: 'whats gucci '
+    text: 'whats gucci'
 }]
 
 class MessageList extends React.Component { 
